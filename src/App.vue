@@ -1,14 +1,37 @@
 <template>
   <div id="app">
-    <div id="nav">
+      <!-- <LoadingScreen v-show="isLoading" ></LoadingScreen> -->
+    <!-- <div id="nav">
       <router-link to="/">Home</router-link> |
-      <router-link to="/about">About</router-link>
-    </div>
+    </div> -->
     <router-view/>
   </div>
 </template>
 
+
+<script>
+// import LoadingScreen from '@/components/LoadingScreen.vue'
+export default {
+    data(){
+        return{
+            isLoading: true
+        }
+    },
+    components: {
+        // LoadingScreen,
+    },
+    mounted() {
+    setTimeout(() => {
+      this.isLoading = false
+    }, 2000)
+  }
+}
+</script>
+
 <style lang="less">
+
+@main-color: #1e1e1e;
+
 #app {
   font-family: Avenir, Helvetica, Arial, sans-serif;
   -webkit-font-smoothing: antialiased;
@@ -30,3 +53,6 @@
   }
 }
 </style>
+
+
+<style src="./assets/styles/css/style.css"/>
