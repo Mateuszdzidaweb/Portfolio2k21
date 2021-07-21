@@ -1,7 +1,7 @@
 <template>
-  <div class="w-full h-screen">
+  <div class="w-full h-screen main-bg">
     <vue-canvas-nest
-      class=""
+      class="mobile-hidden"
       :config="{ color: '255,255,255', count: 120 }"
     ></vue-canvas-nest>
     <div class="w-full h-screen flex items-center justify-star">
@@ -44,6 +44,10 @@
           <h1 class="text-white text-left title-font  swing" v-show="letterVisible27" v-bind:class="{ bounce: isBounced }">e</h1>
           <h1 class="text-white text-left title-font  swing" v-show="letterVisible28" v-bind:class="{ bounce: isBounced }">r</h1>
         </div>
+
+         <div class="w-auto h-20 border-0 flex flex-star mt-10 lg:py-2 pl-2  lg:ml-20">
+             <div class="button_slide slide_right py-2 px-2 lg:px-5 text-xl lg:text-2xl h-12 lg:h-14" v-show="btnContactVisible">Contact Me</div>
+         </div>
 
       </div>
 
@@ -90,6 +94,7 @@ export default {
         letterVisible26: false,
         letterVisible27: false,
         letterVisible28: false,
+        btnContactVisible: false,
     };
   },
   components: { vueCanvasNest },
@@ -97,92 +102,95 @@ export default {
       setTimeout(() => {
         this.letterVisible1 = true
         this.isBounced = true
-      }, 1600)
+      }, 1000)
       setTimeout(()=>{
           this.letterVisible2 = true
-      },1600)
+      },1050)
         setTimeout(()=>{
           this.letterVisible3 = true
-      },1700)
+      },1100)
         setTimeout(()=>{
           this.letterVisible4 = true
-      },1800),
+      },1150),
          setTimeout(()=>{
           this.letterVisible5 = true
-      },1900)
+      },1200)
         setTimeout(()=>{
           this.letterVisible6 = true
-      },2000)
+      },1250)
         setTimeout(()=>{
           this.letterVisible7 = true
-      },2100)
+      },1300)
         setTimeout(()=>{
           this.letterVisible8 = true
-      },2200),
+      },1350),
         setTimeout(()=>{
           this.letterVisible9 = true
-      },2300),
+      },1400),
         setTimeout(()=>{
           this.letterVisible10 = true
-      },2400),
+      },1450),
         setTimeout(()=>{
           this.letterVisible11 = true
-      },2500)
+      },1500)
         setTimeout(()=>{
           this.letterVisible12 = true
-      },2600)
+      },1550)
         setTimeout(()=>{
           this.letterVisible13 = true
-      },2700)
+      },1600)
         setTimeout(()=>{
           this.letterVisible14 = true
-      },2800),
+      },1650),
         setTimeout(()=>{
           this.letterVisible15 = true
-      },2900)
+      },1700)
         setTimeout(()=>{
           this.letterVisible16 = true
-      },3100),
+      },1750),
         setTimeout(()=>{
           this.letterVisible17 = true
-      },3200),
+      },1800),
         setTimeout(()=>{
           this.letterVisible18 = true
-      },3300),
+      },1850),
         setTimeout(()=>{
           this.letterVisible19 = true
-      },3300),
+      },1900),
         setTimeout(()=>{
           this.letterVisible20 = true
-      },3400),
+      },1950),
         setTimeout(()=>{
           this.letterVisible21 = true
-      },3500),
+      },2000),
         setTimeout(()=>{
           this.letterVisible22 = true
-      },3600),
+      },2050),
         setTimeout(()=>{
           this.letterVisible23 = true
-      },3700),
+      },2100),
         setTimeout(()=>{
           this.letterVisible24 = true
-      },3800),
-              setTimeout(()=>{
+      },2200),
+            setTimeout(()=>{
           this.letterVisible25 = true
-      },3900),
+      },2250),
         setTimeout(()=>{
           this.letterVisible26 = true
-      },4000),
+      },2300),
         setTimeout(()=>{
           this.letterVisible27 = true
-      },4100),
+      },2400),
         setTimeout(()=>{
           this.letterVisible28 = true
-          this.isBounced = false
-      },4200),
+        //   this.isBounced = false
+      },2450),
           setTimeout(()=>{
           this.isBounced = false
-      },8000)
+      },4000),
+      setTimeout(() => {
+          this.btnContactVisible = true;
+      },2500)
       
 
   }
@@ -191,7 +199,7 @@ export default {
 
 <!-- Add "scoped" attribute to limit CSS to this component only -->
 <style scoped lang="less">
-.vue-canvas-nest-element {
+.vue-canvas-nest-element{
   background-color: #1e1e1e;
   opacity: 1 !important;
 }
@@ -209,10 +217,11 @@ export default {
 
 .bounce{
 //   color: #00FDD7;
-      animation-duration: 1s;
+      animation-duration: 2s;
   animation-fill-mode: both;
   animation-iteration-count: 1;
   animation-name: rubberBand;
+ 
 }
 
 .text {
@@ -260,21 +269,48 @@ export default {
 }
 
 
-// .effect-shine:hover {
-//   -webkit-mask-image: linear-gradient(-75deg, rgba(0,0,0,.6) 30%, #000 50%, rgba(0,0,0,.6) 70%);
-//   -webkit-mask-size: 200%;
-//   animation: shine 2s infinite;
-// }
-
-// @-webkit-keyframes shine {
-//   from {
-//     -webkit-mask-position: 150%;
-//   }
+.button_slide {
+  color: #00FDD7 ;
+  border: 2px solid #00FDD7;
+  border-radius: 0px;
+  display: inline-block;
+  font-family: "Lucida Console", Monaco, monospace;
+  letter-spacing: 1px;
+  cursor: pointer;
+    animation: fadein 2s;
+  box-shadow: inset 0 0 0 0 #00FDD7;
+  -webkit-transition: ease-out 0.4s;
+  -moz-transition: ease-out 0.4s;
+  transition: ease-out 0.4s;
+ -webkit-animation: fadein 2s; /* Safari and Chrome */
+  overflow:hidden;
   
-//   to {
-//     -webkit-mask-position: -50%;
-//   }
-// }
+  transition: .1s ease-in-out;
+  
+}
+
+
+@keyframes fadein {
+    from {
+        opacity:0;
+        transform: translateY(100%);
+    }
+    50% {
+        opacity: 0.7;
+       transform: translateY(0);
+    }
+    to {
+        opacity:1;
+           
+        
+    }
+}
+
+.slide_right:hover {
+  box-shadow: inset 400px 0 0 0 #00FDD7;
+    border: 2px solid #00FDD7;
+    color: #1E1E1E;
+}
 
 .swing {
   animation-duration: 1s;
@@ -291,6 +327,7 @@ export default {
 @keyframes rubberBand {
   from {
     transform: scale3d(1, 1, 1);
+    opacity:0;
   }
 
   30% {
@@ -311,6 +348,7 @@ export default {
 
   75% {
     transform: scale3d(1.05, .95, 1);
+    opacity:1;
   }
 
   to {
@@ -377,6 +415,15 @@ export default {
 }
 
 @media only screen and (max-width: 600px) {
+
+    .main-bg  {
+  background-color: #1e1e1e;
+  opacity: 1 !important;
+}
+
+    .mobile-hidden{
+        display: none;
+    }
   .title-font {
     font-family: "Ramabhadra", sans-serif;
     font-weight: 700;
