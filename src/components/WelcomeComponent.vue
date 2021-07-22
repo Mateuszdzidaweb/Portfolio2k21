@@ -49,12 +49,23 @@
              <div class="button_slide slide_right py-2 px-2 lg:px-5 text-xl lg:text-2xl h-12 lg:h-14" v-show="btnContactVisible">Contact Me</div>
          </div>
 
+
       </div>
 
       <!-- 
         <h1 class="text-7xl text-white text-left title-font">My name is Mat</h1>
         <h1 class="text-7xl text-white text-left title-font">I'm Web Developer</h1> -->
+      
+          
     </div>
+        <div class="scroll-down-left w-auto h-auto px-2 absolute bottom-4 flex flex-row">
+            <span class="text-white text-md lg:text-xl">Scroll down</span>
+            <img src="@/assets/icons/arrow-down.svg" alt="">
+        </div>
+        <div class="scroll-down-left w-auto h-auto px-2 absolute bottom-4 right-0 flex flex-row">
+            <span class="text-white text-md lg:text-xl">Scroll down</span>
+            <img src="@/assets/icons/arrow-down.svg" alt="">
+        </div>
   </div>
 </template>
 
@@ -355,6 +366,30 @@ export default {
     transform: scale3d(1, 1, 1);
   }
 }
+
+
+ @keyframes bounce-1 {
+        0%   { transform: translateY(0); }
+        50%  { transform: translateY(-20px); }
+        100% { transform: translateY(0); }
+}
+
+
+.scroll-down-left{
+    writing-mode: vertical-rl;
+             animation-name: bounce-1;
+         animation-duration: 1.5s;
+        animation-timing-function: linear;
+        animation-iteration-count: infinite;
+
+    span{
+        //  animation-name: bounce-1;
+        //  animation-duration: 2s;
+        // animation-timing-function: linear;
+    }
+}
+
+
 
 
 
