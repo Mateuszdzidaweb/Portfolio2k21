@@ -12,6 +12,7 @@
     "particles.js": "^2.0.0",
     "vue": "^2.6.11",
     "vue-canvas-nest": "^2.0.0",
+    "vue-observe-visibility": "^1.0.0",
     "vue-router": "^3.2.0"
   },
   "devDependencies": {

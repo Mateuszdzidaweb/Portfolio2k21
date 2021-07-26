@@ -1,20 +1,20 @@
 <template>
   <div class="home">
     <WelcomeComponent/>
-    <aboutMeComponent></aboutMeComponent>
+    <MyPortfolioComponent></MyPortfolioComponent>
   </div>
 </template>
 
 <script>
 // @ is an alias to /src
 import WelcomeComponent from '@/components/WelcomeComponent.vue'
-import AboutMeComponent from '@/components/AboutMeComponent'
+import MyPortfolioComponent from '@/components/MyPortfolioComponent'
 
 export default {
   name: 'Home',
   components: {
     WelcomeComponent,
-    AboutMeComponent
+    MyPortfolioComponent
   }
 }
 </script>

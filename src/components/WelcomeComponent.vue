@@ -52,18 +52,15 @@
 
       </div>
 
-      <!-- 
-        <h1 class="text-7xl text-white text-left title-font">My name is Mat</h1>
-        <h1 class="text-7xl text-white text-left title-font">I'm Web Developer</h1> -->
       
           
     </div>
-        <div class="scroll-down-left w-auto h-auto px-2 absolute bottom-4 flex flex-row">
-            <span class="text-white text-md lg:text-xl">Scroll down</span>
+        <div class="scroll-down-left w-auto h-auto absolute bottom-4 left-2 flex flex-row">
+            <span class="text-white text-sm lg:text-xl px-1 ">Scroll down</span>
             <img src="@/assets/icons/arrow-down.svg" alt="">
         </div>
-        <div class="scroll-down-left w-auto h-auto px-2 absolute bottom-4 right-0 flex flex-row">
-            <span class="text-white text-md lg:text-xl">Scroll down</span>
+        <div class="scroll-down-left w-auto h-auto absolute bottom-4 right-2 flex flex-row">
+            <span class="text-white text-sm lg:text-xl px-1 ">Scroll down</span>
             <img src="@/assets/icons/arrow-down.svg" alt="">
         </div>
   </div>
