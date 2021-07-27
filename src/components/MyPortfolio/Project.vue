@@ -1,13 +1,12 @@
 <template>
-  <div class="opacity-70 hover:opacity-100  cursor-pointer overflow-hidden bg-white bg-opacity-10 rounded ">
+  <div class="opacity-70 hover:opacity-100  cursor-pointer overflow-hidden bg-white bg-opacity-10 rounded " >
     <li class="relative">
       <div class="overflow-hidden w-full group aspect-w-10 aspect-h-7 flex flex-wrap image-hover-zoom">
         <!-- <div class="overlay"> -->
           <img
             :src="require('../../assets/images/' + imageName)"
-            width="350"
-            height="350"
-            class="object-cover pointer-events-none"
+
+            class="object-cover pointer-events-none xl:w-96 xl:h-96"
           />
           <!-- <button type="button" class="absolute inset-0">
               <span class="sr-only">View details for IMG</span>

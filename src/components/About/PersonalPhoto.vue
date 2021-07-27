@@ -3,11 +3,11 @@
     <figure
       v-show="overlayVisible"
       v-bind:class="{ fade: isFade }"
-      class="image-overlay flex justify-center items-center w-96 h-96"
+      class="image-overlay flex justify-center items-center w-full h-full lg:w-96 lg:h-96"
     >
       <picture>
-        <source media="(min-width:650px)" srcset="" />
-        <source media="(min-width:465px)" srcset="" />
+        <source media="(min-width:650px)" srcset="@/assets/images/Mat-nobg.png" />
+        <source media="(min-width:465px)" srcset="@/assets/images/Mat-nobg-mobile.png" />
         <img
           v-show="photoVisible"
           v-bind:class="{ fadeAndSlide: isFadeAndSlide }"
@@ -99,5 +99,10 @@ export default {
   to {
     opacity: 1;
   }
+}
+
+@media only screen and (max-width: 600px) {
+
+
 }
 </style>

@@ -3,16 +3,16 @@
     <p
       v-show="textVisible"
       v-bind:class="{ fadeSlideUp: isFade }"
-      class="text-white h-auto text-xl flex py-4 xl:py-8 text-left"
+      class="text-white h-auto text-xl flex py-4 xl:py-8 lg:text-left text-justify word-brake m-auto"
     >
-      {{ portfolioDescription }}
+      {{ textDescription }}
     </p>
   </div>
 </template>
 
 <script>
 export default {
-  props: ["portfolioDescription"],
+  props: ["textDescription"],
   data() {
     return {
       isVisible: false,
@@ -28,9 +28,6 @@ export default {
       if (isVisible === true) {
         this.textVisible = true;
         this.isFade = true;
-      }else{
-        this.textVisible = false;
-        this.isFade = false;
       }
     },
   },
@@ -44,6 +41,10 @@ export default {
   transition: ease-out 0.4s;
   animation-duration: 3s;
   animation-name: fadeSlideUp;
+}
+
+.word-brake{
+    word-break: break-all;
 }
 
 @keyframes fadeSlideUp {

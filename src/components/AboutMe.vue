@@ -1,18 +1,22 @@
 <template>
   <div>
-    <div class="w-full h-auto lg:h-screen bg-color border-2">
+    <div class="w-full h-auto lg:h-screen lg:py-10 xl:py-0 bg-color">
       <section
         id="section-AboutMe"
-        class="py-5 lg:py-20 px-5 lg:px-20 flex flex-col lg:flex-row w-full lg:h-auto border-2"
+        class="py-5 xl:py-0 px-5 lg:px-20 flex flex-col lg:flex-row lg:w-full  lg:m-auto lg:h-auto"
       >
-        <div id="text-zone" class="w-full lg:w-1/2 h-auto flex flex-col ">
-            <PersonalPhoto></PersonalPhoto>
+        <div id="text-zone" class="w-full 2xl:items-center xl:min-h-screen xl:justify-center lg:w-1/2 h-auto flex flex-col">
+          <PersonalPhoto></PersonalPhoto>
         </div>
 
-        <div id="text-zone" class="w-1/2 h-auto flex flex-col border-2"></div>
+        <div id="text-zone" class="w-full xl:min-h-screen xl:justify-center lg:w-2/3 xl:w-1/3 h-auto flex flex-col justify-center">
+          <AboutMeHeading></AboutMeHeading>
 
-        <div class="work-big w-auto h-auto absolute">
-          <h1 class="work-txt">About</h1>
+          <TextFade class="lg:h-40" :textDescription="AboutMeText"></TextFade>
+        </div>
+
+        <div class="about-big w-auto h-auto absolute">
+          <h1 class="about-txt">About</h1>
         </div>
       </section>
     </div>
@@ -20,27 +24,57 @@
 </template>
 
 <script>
-import PersonalPhoto from '@/components/About/PersonalPhoto'
+import PersonalPhoto from "@/components/About/PersonalPhoto";
+import AboutMeHeading from "@/components/About/AboutMeHeading";
+import TextFade from "@/components/MyPortfolio/TextFade.vue";
 export default {
-    data(){
-        return{
-
-        }
-    },
-    components:{
-        PersonalPhoto,
-    }
-}
+  data() {
+    return {
+      AboutMeText:
+        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pretium mi sed sapien faucibus varius. Sed luctus justo ut mauris facilisis, a pulvinar orci blandit. Integer viverra in purus a faucibus. Proin ut rutrum massa, vitae interdum tortor.",
+    };
+  },
+  components: {
+    PersonalPhoto,
+    AboutMeHeading,
+    TextFade,
+  },
+};
 </script>
 
 <style lang="less">
-    
-    .image-overlay{
-        // clip-path: polygon(25% 0,75% 0,90% 50%,75% 100%,25% 100%,30px 50%);
-            // clip-path: ellipse(220px 255px at 10% 20%);
-            clip-path: circle(45%);
-            // border: 2px solid #00fdd7;
-             shape-outside: border-box;
-            background: rgba(0, 0, 0, 0.123);
+.image-overlay {
+  // clip-path: polygon(25% 0,75% 0,90% 50%,75% 100%,25% 100%,30px 50%);
+  // clip-path: ellipse(220px 255px at 10% 20%);
+  clip-path: circle(45%);
+  // border: 2px solid #00fdd7;
+  shape-outside: border-box;
+  background: rgba(0, 0, 0, 0.123);
+}
+
+.about-big {
+  left: 50vh;
+  margin-top: 6rem;
+  z-index: 1;
+  .about-txt {
+    color: rgba(255, 255, 255, 0.025);
+    font-size: 280px;
+    font-weight: 600;
+    letter-spacing: -15px;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .about-big {
+    left: 8vh;
+    margin-top: 4rem;
+    z-index: 1;
+    .about-txt {
+      color: rgba(255, 255, 255, 0.025);
+      font-size: 100px;
+      font-weight: 600;
+      letter-spacing: -8px;
     }
+  }
+}
 </style>

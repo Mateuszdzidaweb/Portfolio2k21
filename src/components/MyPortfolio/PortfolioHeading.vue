@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div v-observe-visibility="ObjectVisible" class="flex flex-row w-auto h-20 lg:h-24">
+    <div v-observe-visibility="ObjectVisible" class="flex flex-row w-auto  lg:justify-start h-20 lg:h-32">
       <h1
         class="portfolio-heading text-7xl flex py-4"
         v-show="letterVisible1"
