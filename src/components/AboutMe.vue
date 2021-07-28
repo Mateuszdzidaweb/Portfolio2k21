@@ -1,6 +1,5 @@
 <template>
-  <div>
-    <div class="w-full h-auto lg:h-screen lg:py-10 xl:py-0 bg-color">
+    <div class="w-full h-auto lg:h-screen lg:py-10 xl:py-0 bg-color border-2">
       <section
         id="section-AboutMe"
         class="py-5 xl:py-0 px-5 lg:px-20 flex flex-col lg:flex-row lg:w-full  lg:m-auto lg:h-auto"
@@ -20,7 +19,6 @@
         </div>
       </section>
     </div>
-  </div>
 </template>
 
 <script>

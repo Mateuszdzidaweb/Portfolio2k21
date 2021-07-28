@@ -25,10 +25,10 @@
       </section>
 
       <div class="w-full  h-auto flex justify-center z-10">
-        <section class="px-0 mx-auto max-w-10xl sm:px-0 lg:px-8 lg:py-4 xl:py-10 md:w-full  border-2">
+        <section class="px-0 mx-auto max-w-10xl sm:px-0 lg:px-8 lg:py-4 xl:py-10 md:w-full  ">
           <ul
             role="list"
-            class=" grid grid-cols-2 mx-auto sm:grid-cols-2 md:flex md:flex-wrap  xl:w-2/3 border-2"
+            class=" grid grid-cols-2 mx-auto sm:grid-cols-2 md:flex md:flex-wrap  xl:w-2/3 "
           >
             <Project
               data-aos="zoom-in"
@@ -83,6 +83,7 @@ md:flex md:flex-wrap md:justify-center
      <Projects></Projects>
     <Projects></Projects>
     <Projects></Projects> -->
+
           </ul>
         </section>
       </div>
