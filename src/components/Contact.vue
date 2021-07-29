@@ -7,7 +7,7 @@
       >
         <div
           id="text-zone"
-          class="w-full 2xl:items-center xl:min-h-screen xl:justify-center lg:w-2/3 h-auto flex flex-col"
+          class="w-full 2xl:items-center xl:min-h-screen xl:justify-center lg:w-2/3 lg:ml-10 h-auto flex flex-col py-10 lg:py-0"
         >
              <!-- <div class="flex border w-2/3">
         
@@ -17,8 +17,13 @@
 
         <div
           id="text-zone"
-          class="w-full xl:min-h-screen xl:justify-center lg:w-2/3 xl:w-1/3 h-auto flex flex-col justify-center"
-        ></div>
+          class="w-full xl:min-h-screen xl:justify-center lg:mr-10 lg:w-2/3 xl:w-1/3 h-auto flex flex-col justify-center "
+        >
+        
+        <Socials></Socials>
+
+        
+        </div>
 
         <!-- <div class="about-big w-auto h-auto absolute">
           <h1 class="about-txt">Contact</h1>
@@ -30,6 +35,7 @@
 
 <script>
 import ContactForm from "@/components/Contact/ContactForm";
+import Socials from '@/components/Contact/Socials';
 export default {
   data() {
       return{
@@ -38,6 +44,7 @@ export default {
   },
   components: {
     ContactForm,
+    Socials
   },
 };
 </script>

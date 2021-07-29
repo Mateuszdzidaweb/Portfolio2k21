@@ -1,5 +1,5 @@
 <template>
-    <div class="w-full h-auto lg:h-screen lg:py-10 xl:py-0 bg-color border-2">
+    <div class="w-full h-auto lg:h-screen lg:py-10 xl:py-0 bg-color">
       <section
         id="section-AboutMe"
         class="py-5 xl:py-0 px-5 lg:px-20 flex flex-col lg:flex-row lg:w-full  lg:m-auto lg:h-auto"
@@ -61,6 +61,21 @@ export default {
     letter-spacing: -15px;
   }
 }
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .about-big {
+    left: 9vh;
+    margin-top: -7rem;
+    z-index: 1;
+  }
+  .about-txt {
+    color: rgba(255, 255, 255, 0.05);
+    font-size: 200px;
+    font-weight: 600;
+    letter-spacing: -15px
+  }
+}
+
 
 @media only screen and (max-width: 600px) {
   .about-big {

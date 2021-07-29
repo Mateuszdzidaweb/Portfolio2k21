@@ -24,11 +24,13 @@
         </div>
       </section>
 
-      <div class="w-full  h-auto flex justify-center z-10">
-        <section class="px-0 mx-auto max-w-10xl sm:px-0 lg:px-8 lg:py-4 xl:py-10 md:w-full  ">
+      <div class="w-full h-auto flex justify-center z-10">
+        <section
+          class="px-0 mx-auto max-w-10xl sm:px-0 lg:px-8 lg:py-4 xl:py-10 md:w-full wrap-photos "
+        >
           <ul
             role="list"
-            class=" grid grid-cols-2 mx-auto sm:grid-cols-2 md:flex md:flex-wrap  xl:w-2/3 "
+            class="grid grid-cols-2 mx-auto sm:grid-cols-2 md:flex md:justify-center md:flex-wrap 2xl:justify-start xl:w-2/3 "
           >
             <Project
               data-aos="zoom-in"
@@ -44,7 +46,7 @@
               :imageName="fitnessAppImage"
             >
             </Project>
-                        <Project
+            <Project
               data-aos="zoom-in"
               data-aos-delay="300"
               data-aos-duration="1500"
@@ -52,7 +54,7 @@
               :imageName="fitnessAppImage"
             >
             </Project>
-                                    <Project
+            <Project
               data-aos="zoom-in"
               data-aos-delay="300"
               data-aos-duration="1500"
@@ -60,7 +62,7 @@
               :imageName="fitnessAppImage"
             >
             </Project>
-                                    <Project
+            <Project
               data-aos="zoom-in"
               data-aos-delay="300"
               data-aos-duration="1500"
@@ -68,7 +70,7 @@
               :imageName="fitnessAppImage"
             >
             </Project>
-                                                <Project
+            <Project
               data-aos="zoom-in"
               data-aos-delay="300"
               data-aos-duration="1500"
@@ -77,13 +79,12 @@
             >
             </Project>
             <!-- grid grid-cols-2 mx-auto sm:grid-cols-2 md:flex md:flex-wrap  border-2 -->
-<!-- class="grid grid-cols-1 mx-auto sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4" -->
+            <!-- class="grid grid-cols-1 mx-auto sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4" -->
             <!-- <Projects></Projects>
 md:flex md:flex-wrap md:justify-center
      <Projects></Projects>
     <Projects></Projects>
     <Projects></Projects> -->
-
           </ul>
         </section>
       </div>
@@ -124,7 +125,25 @@ export default {
   }
 }
 
-@media only screen and (max-width: 1280px) {
+.project:empty {
+  height: 0;
+  border: none;
+  display: none;
+}
+
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .work-big {
+    left: 24vh;
+    margin-top: -2rem;
+    z-index: 1;
+  }
+  .work-txt {
+    color: rgba(255, 255, 255, 0.05);
+    font-size: 200px;
+    font-weight: 600;
+    letter-spacing: -15px
+  }
 }
 
 @media only screen and (max-width: 600px) {

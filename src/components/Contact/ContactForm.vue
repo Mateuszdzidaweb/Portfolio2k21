@@ -1,11 +1,11 @@
 <template>
-  <div class="w-full xl:w-4/5 2xl:w-3/5 flex">
+  <div class="w-full xl:w-4/5 2xl:w-3/5 flex ">
     <form action="#" class="w-full">
       <!-- <h2 class="text-2xl pb-3 font-semibold">
         Send Message
     </h2> -->
       <div>
-        <h1 class="portfolio-heading text-7xl w-1/3 flex py-10">Contact</h1>
+        <ContactHeading></ContactHeading>
 
         <div class="flex flex-col lg:flex-row mb-3">
           <!-- <label for="name">Name</label> -->
@@ -70,7 +70,7 @@
           ></textarea>
         </div>
       </div>
-      <div class="w-full pt-3 flex justify-end">
+      <div class="w-full pt-3 flex justify-center lg:justify-end">
         <button
 
             data-aos="fade-up"
@@ -79,7 +79,7 @@
             data-aos-anchor-placement="top-bottom"
 
           type="submit"
-          class="w-2/3 lg:w-1/3 flex justify-center button_slide slide_right py-2 px-2 lg:px-5 text-xl lg:text-2xl h-12 lg:h-14"
+          class="w-2/3 md:w-1/3 lg:w-1/3 flex justify-center button_slide slide_right py-2 px-2 lg:px-5 text-xl lg:text-2xl h-12 lg:h-14"
         >
           Send
         </button>
@@ -87,6 +87,21 @@
     </form>
   </div>
 </template>
+
+
+<script>
+import ContactHeading from '@/components/Contact/ContactHeading.vue';
+export default {
+    data(){
+        return{
+
+        }
+    },
+    components:{
+        ContactHeading
+    }
+}
+</script>
 
 <style lang="less">
 .input-color {

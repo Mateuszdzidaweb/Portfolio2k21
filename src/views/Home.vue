@@ -1,5 +1,5 @@
 <template>
-  <div class="home">
+  <div class="home bg-color overflow-hidden">
     <WelcomeComponent/>
     <MyPortfolioComponent></MyPortfolioComponent>
     <AboutMe></AboutMe>
