@@ -11,7 +11,7 @@
       <div class="socials-bg-color flex w-full justify-center lg:w-1/2 h-full lg:mt-20 xl:mt-24 p-2 pt-4">
         <!-- <h3 class="text-2xl font-semibold mb-5">My Social Media</h3> -->
         <!-- list -->
-           <div class="flex flex-row md:flex-row  lg:flex-col gap-3">
+           <div class="flex flex-col md:flex-row  lg:flex-col gap-3">
           <a
             href="#"
             class="flex items-center text-white text-2xl p-2"
@@ -35,7 +35,7 @@
             Github
           </a>
           <a
-            href="#"
+            href="https://www.linkedin.com/in/mateusz-dzida-030b3615a/" target="_blank"
             class="flex items-center text-white text-2xl p-2"
             data-aos="fade-left"
             data-aos-delay="650"
@@ -55,7 +55,7 @@
             Linkedin
           </a>
           <a
-            href="#"
+            href=""
             class="flex items-center text-white text-2xl p-2"
             data-aos="fade-left"
             data-aos-delay="750"

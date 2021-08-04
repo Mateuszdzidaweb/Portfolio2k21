@@ -2,7 +2,7 @@
   <div class="w-full h-screen main-bg">
     <vue-canvas-nest
       class="mobile-hidden"
-      :config="{ color: '255,255,255', count: 120 }"
+      :config="{ color: '255,255,255', count: 180 }"
     ></vue-canvas-nest>
     <div class="w-full h-screen flex items-center justify-star">
       <div class="flex flex-col w-auto pl-4">
@@ -292,7 +292,6 @@ export default {
   transition: ease-out 0.4s;
  -webkit-animation: fadein 2s; /* Safari and Chrome */
   overflow:hidden;
-  
   transition: .1s ease-in-out;
   
 }

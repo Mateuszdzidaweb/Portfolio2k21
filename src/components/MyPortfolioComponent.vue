@@ -1,5 +1,26 @@
 <template>
   <div>
+    <FitnessProjectModal
+      v-show="isFitnessProjectModalVisible"
+      @closeFitnessProjectModal="closeFitnessProjectModal"
+      :projectTitle="'Fitness mobile App'"
+    >
+    </FitnessProjectModal>
+
+    <NewsApiProjectModal
+      v-show="isNewsApiProjectModalVisible"
+      @closeNewsApiProjectModal="closeNewsApiProjectModal"
+      :projectTitle="'News Api'"
+    >
+    </NewsApiProjectModal>
+
+    <CaffeeProjectModal
+      v-show="isCaffeeProjectModalVisible"
+      @closeCaffeeProjectModal="closeCaffeeProjectModal"
+      :projectTitle="'Caffee Store mobile App'"
+    >
+    </CaffeeProjectModal>
+
     <div class="w-full h-auto lg:py-10 bg-color">
       <section
         id="section-work"
@@ -11,7 +32,10 @@
         >
           <PortfolioHeading></PortfolioHeading>
 
-          <TextFade class="2xl:py-5" :textDescription="portfolioDescription"></TextFade>
+          <TextFade
+            class="2xl:py-5"
+            :textDescription="'This is a small gallery of projects that I have done during university and my free time. Most of my projects were created to enhance my Web Development skills. Interested to see some of my work? Visit my work page.'"
+          ></TextFade>
         </div>
 
         <div
@@ -19,65 +43,49 @@
           class="w-1/2 xl:min-h-screen xl:justify-center h-auto flex flex-col"
         ></div>
 
-        <div class="work-big w-auto h-auto absolute">
+        <div
+          class="work-big w-auto h-auto absolute md:hidden lg:block xl:block 2xl:block"
+        >
           <h1 class="work-txt">Work</h1>
         </div>
       </section>
 
       <div class="w-full h-auto flex justify-center z-10">
         <section
-          class="px-0 mx-auto max-w-10xl sm:px-0 lg:px-8 lg:py-4 xl:py-10 md:w-full wrap-photos "
+          class="px-2 mx-auto max-w-10xl sm:px-0 lg:px-8 lg:py-4 xl:py-10 md:w-full wrap-photos"
         >
           <ul
             role="list"
-            class="grid grid-cols-2 mx-auto sm:grid-cols-2 md:flex md:justify-center md:flex-wrap 2xl:justify-start xl:w-2/3 "
+            class="grid grid-cols-2 mx-auto sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 w-full lg:w-full 2xl:grid-cols-3 2xl:w-4/6 max-projects-width"
           >
-            <Project
-              data-aos="zoom-in"
-              data-aos-duration="1500"
-              data-aos-anchor-placement="bottom-bottom"
-              :imageName="fitnessAppImage"
-            ></Project>
-            <Project
-              data-aos="zoom-in"
-              data-aos-delay="300"
-              data-aos-duration="1500"
-              data-aos-anchor-placement="bottom-bottom"
-              :imageName="fitnessAppImage"
-            >
-            </Project>
-            <Project
-              data-aos="zoom-in"
-              data-aos-delay="300"
-              data-aos-duration="1500"
-              data-aos-anchor-placement="bottom-bottom"
-              :imageName="fitnessAppImage"
-            >
-            </Project>
-            <Project
-              data-aos="zoom-in"
-              data-aos-delay="300"
-              data-aos-duration="1500"
-              data-aos-anchor-placement="bottom-bottom"
-              :imageName="fitnessAppImage"
-            >
-            </Project>
-            <Project
-              data-aos="zoom-in"
-              data-aos-delay="300"
-              data-aos-duration="1500"
-              data-aos-anchor-placement="bottom-bottom"
-              :imageName="fitnessAppImage"
-            >
-            </Project>
-            <Project
-              data-aos="zoom-in"
-              data-aos-delay="300"
-              data-aos-duration="1500"
-              data-aos-anchor-placement="bottom-bottom"
-              :imageName="fitnessAppImage"
-            >
-            </Project>
+            <div @click="OpenFitnessProjectModal">
+              <Project
+                data-aos="zoom-in"
+                data-aos-duration="1500"
+                data-aos-anchor-placement="bottom-bottom"
+                :imageName="'fitnessApp8.png'"
+              ></Project>
+            </div>
+            <div @click="OpenNewsApiProjectModal">
+              <Project
+                data-aos="zoom-in"
+                data-aos-delay="300"
+                data-aos-duration="1500"
+                data-aos-anchor-placement="bottom-bottom"
+                :imageName="'NewsApiImg.png'"
+              >
+              </Project>
+            </div>
+            <div @click="OpenCaffeeProjectModal">
+              <Project
+                data-aos="zoom-in"
+                data-aos-delay="300"
+                data-aos-duration="1500"
+                data-aos-anchor-placement="bottom-bottom"
+                :imageName="'CoffeeApp.png'"
+              >
+              </Project>
+            </div>
             <!-- grid grid-cols-2 mx-auto sm:grid-cols-2 md:flex md:flex-wrap  border-2 -->
             <!-- class="grid grid-cols-1 mx-auto sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4" -->
             <!-- <Projects></Projects>
@@ -96,18 +104,49 @@ md:flex md:flex-wrap md:justify-center
 import PortfolioHeading from "@/components/MyPortfolio/PortfolioHeading.vue";
 import TextFade from "@/components/MyPortfolio/TextFade.vue";
 import Project from "@/components/MyPortfolio/Project.vue";
+import FitnessProjectModal from "@/components/MyPortfolio/Projects/FitnessProjectModal";
+import NewsApiProjectModal from "@/components/MyPortfolio/Projects/NewsApiProjectModal";
+import CaffeeProjectModal from "@/components/MyPortfolio/Projects/CaffeeProjectModal";
 export default {
   data() {
     return {
-      fitnessAppImage: "fitnessApp.png",
-      portfolioDescription:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pretium mi sed sapien faucibus varius. Sed luctus justo ut mauris facilisis, a pulvinar orci blandit. Integer viverra in purus a faucibus. Proin ut rutrum massa, vitae interdum tortor.",
+      //     caffeeProjectTitle:'Caffee Store App',
+      //   fitnessAppImage: "CoffeeApp.png",
+      //   newsApp: "NewsApiImg.png",
+      //   awg: "fitnessApp8.png",
+      isFitnessProjectModalVisible: false,
+      isNewsApiProjectModalVisible: false,
+      isCaffeeProjectModalVisible: false,
     };
   },
   components: {
     PortfolioHeading,
     TextFade,
     Project,
+    FitnessProjectModal,
+    NewsApiProjectModal,
+    CaffeeProjectModal,
+  },
+  methods: {
+    OpenFitnessProjectModal() {
+      console.log("openModal");
+      this.isFitnessProjectModalVisible = true;
+    },
+    closeFitnessProjectModal() {
+      this.isFitnessProjectModalVisible = false;
+    },
+    OpenNewsApiProjectModal() {
+      this.isNewsApiProjectModalVisible = true;
+    },
+    closeNewsApiProjectModal() {
+      this.isNewsApiProjectModalVisible = false;
+    },
+    OpenCaffeeProjectModal() {
+      this.isCaffeeProjectModalVisible = true;
+    },
+    closeCaffeeProjectModal() {
+      this.isCaffeeProjectModalVisible = false;
+    },
   },
 };
 </script>
@@ -131,6 +170,9 @@ export default {
   display: none;
 }
 
+.max-projects-width {
+  max-width: 1150px;
+}
 
 @media (min-width: 768px) and (max-width: 1024px) {
   .work-big {
@@ -142,7 +184,7 @@ export default {
     color: rgba(255, 255, 255, 0.05);
     font-size: 200px;
     font-weight: 600;
-    letter-spacing: -15px
+    letter-spacing: -15px;
   }
 }
 

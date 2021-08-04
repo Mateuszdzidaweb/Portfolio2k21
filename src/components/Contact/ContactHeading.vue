@@ -2,7 +2,7 @@
   <div>
     <div
       v-observe-visibility="ObjectVisible"
-      class="flex flex-row w-auto justify-center lg:justify-start xl:mb-10 h-20 md:h-24 lg:h-32"
+      class="flex flex-row w-auto justify-center lg:justify-start xl:mb-10 2xl:mb-20 h-20 md:h-24 lg:h-32"
     >
       <h1
         class="portfolio-heading text-7xl flex py-4"

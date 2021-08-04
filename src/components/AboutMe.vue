@@ -2,7 +2,7 @@
     <div class="w-full h-auto lg:h-screen lg:py-10 xl:py-0 bg-color">
       <section
         id="section-AboutMe"
-        class="py-5 xl:py-0 px-5 lg:px-20 flex flex-col lg:flex-row lg:w-full  lg:m-auto lg:h-auto"
+        class="py-5 lg:py-0 xl:py-0 px-5 lg:px-20 flex flex-col lg:flex-row lg:w-full  lg:m-auto lg:h-auto"
       >
         <div id="text-zone" class="w-full 2xl:items-center xl:min-h-screen xl:justify-center lg:w-1/2 h-auto flex flex-col">
           <PersonalPhoto></PersonalPhoto>
@@ -14,7 +14,7 @@
           <TextFade class="lg:h-40" :textDescription="AboutMeText"></TextFade>
         </div>
 
-        <div class="about-big w-auto h-auto absolute">
+        <div class="about-big w-auto h-auto absolute md:hidden lg:block xl:block 2xl:block">
           <h1 class="about-txt">About</h1>
         </div>
       </section>
@@ -29,7 +29,7 @@ export default {
   data() {
     return {
       AboutMeText:
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aenean pretium mi sed sapien faucibus varius. Sed luctus justo ut mauris facilisis, a pulvinar orci blandit. Integer viverra in purus a faucibus. Proin ut rutrum massa, vitae interdum tortor.",
+        "My name is Matt and I'm a web developer. I have a huge passion for building web applications and dynamic user expierience. I enjoy building everything from small websites to rich interactive web apps",
     };
   },
   components: {

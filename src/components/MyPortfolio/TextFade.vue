@@ -3,7 +3,7 @@
     <p
       v-show="textVisible"
       v-bind:class="{ fadeSlideUp: isFade }"
-      class="text-white h-auto text-xl flex py-4 px-2 xl:py-8 lg:text-left text-justify word-brake m-auto"
+      class="text-white h-auto text-xl flex py-4 px-2 xl:py-8 lg:text-left text-left m-auto"
     >
       {{ textDescription }}
     </p>

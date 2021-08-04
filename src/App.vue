@@ -4,27 +4,44 @@
     <!-- <div id="nav">
       <router-link to="/">Home</router-link> |
     </div> -->
+    <!-- <MyPortfolioComponent v-show="!false" @openProjectModal='openModal' ></MyPortfolioComponent> -->
+    <!-- <ProjectModal v-show="isProjectModalVisible" >
+    </ProjectModal> -->
+    <!-- @close="closeProjectModal" -->
     <router-view/>
+
+
   </div>
 </template>
 
 
 <script>
+// import ProjectModal from "@/components/MyPortfolio/ProjectModal";
+// import MyPortfolioComponent from '@/components/MyPortfolioComponent'
 // import LoadingScreen from '@/components/LoadingScreen.vue'
 export default {
     data(){
         return{
-            isLoading: true
+            isLoading: true,
+            isProjectModalVisible: false,
         }
     },
     components: {
         // LoadingScreen,
+        // ProjectModal,
+        // MyPortfolioComponent,
     },
     mounted() {
     setTimeout(() => {
       this.isLoading = false
     }, 2000)
-  }
+  },
+//   methods:{
+//       openModal(){
+//           console.log('openModal');
+//           this.isProjectModalVisible = true;
+//       }
+//   }
 }
 </script>
 
