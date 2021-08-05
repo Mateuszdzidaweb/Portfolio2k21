@@ -5,13 +5,14 @@
         class="py-5 lg:py-0 xl:py-0 px-5 lg:px-20 flex flex-col lg:flex-row lg:w-full  lg:m-auto lg:h-auto"
       >
         <div id="text-zone" class="w-full 2xl:items-center xl:min-h-screen xl:justify-center lg:w-1/2 h-auto flex flex-col">
-          <PersonalPhoto></PersonalPhoto>
+          <PersonalPhoto class="xl:mt-32"></PersonalPhoto>
         </div>
 
         <div id="text-zone" class="w-full xl:min-h-screen xl:justify-center lg:w-2/3 xl:w-1/3 h-auto flex flex-col justify-center">
           <AboutMeHeading></AboutMeHeading>
 
-          <TextFade class="lg:h-40" :textDescription="AboutMeText"></TextFade>
+          <TextFade class="lg:h-40" :textDescription="`My name is Matt and I'm a web developer. I have a huge passion for building web applications and dynamic user experiences. I enjoy building everything from small websites to rich interactive web apps.`"
+          :textDescriptionParagraph2="`The primary area of my interest is the front-end. I'm a web developer graduate who is looking for new opportunities.`"></TextFade>
         </div>
 
         <div class="about-big w-auto h-auto absolute md:hidden lg:block xl:block 2xl:block">
@@ -20,7 +21,7 @@
       </section>
     </div>
 </template>
-
+pp
 <script>
 import PersonalPhoto from "@/components/About/PersonalPhoto";
 import AboutMeHeading from "@/components/About/AboutMeHeading";
@@ -28,8 +29,7 @@ import TextFade from "@/components/MyPortfolio/TextFade.vue";
 export default {
   data() {
     return {
-      AboutMeText:
-        "My name is Matt and I'm a web developer. I have a huge passion for building web applications and dynamic user expierience. I enjoy building everything from small websites to rich interactive web apps",
+      
     };
   },
   components: {

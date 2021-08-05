@@ -1,8 +1,8 @@
 <template>
   <div>
-    <div class="modalWpapper w-full h-full flex justify-center items-center fixed top-0">
+    <div class="modalWpapper w-full h-full flex justify-center items-center fixed top-0 z-99">
       <!-- modal -->
-      <div id="modal" class="w-full h-3/5 lg:w-5/6 xl:w-3/5 2xl:w-2/5 bg-white relative">
+      <div id="modal" class="w-full h-3/5 lg:w-5/6 xl:w-3/5 2xl:w-2/5 bg-white relative z-99">
         <!-- button close -->
         <button
           @click="closeFitnessProjectModal"
@@ -54,7 +54,6 @@ export default {
   methods: {
     closeFitnessProjectModal() {
       this.$emit("closeFitnessProjectModal");
-      console.log("emmit close");
     },
   },
 };

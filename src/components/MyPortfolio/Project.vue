@@ -7,14 +7,11 @@
       <div
         class="overflow-hidden w-full group aspect-w-10 aspect-h-7 flex flex-wrap justify-end image-hover-zoom lg:max-w-lg max-h-xl 2xl:max-w-2xl"
       >
-        <div class="overlay1">
+        <div class="overlay">
           <img
-            :src="require('../../assets/images/' + imageName)"
+            :src="require('../../assets/images/' + imageName)" alt="Project Image"
             class="object-cover pointer-events-none w-full lg:max-w-lg max-h-xl 2xl:max-w-2xl"
           />
-          <!-- <button type="button" class="absolute inset-0">
-              <span class="sr-only">View details for IMG</span>
-            </button> -->
         </div>
       </div>
     </li>

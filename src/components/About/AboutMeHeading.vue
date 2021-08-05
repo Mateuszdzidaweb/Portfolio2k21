@@ -29,10 +29,8 @@ export default {
     };
   },
   methods: {
-    ObjectVisible(isVisible, entry) {
+    ObjectVisible(isVisible) {
       this.isVisible = true;
-      console.log(entry);
-      console.log(isVisible);
       if (isVisible === true) {
         setTimeout(() => {
           this.letterVisible1 = true;

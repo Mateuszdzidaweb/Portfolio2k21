@@ -1,6 +1,6 @@
 <template>
   <div class="w-full xl:w-4/5 2xl:w-3/5 flex ">
-    <form action="#" class="w-full">
+    <form action="mailto:matidzida2@gmail.com" method="get" enctype="text/plain" class="w-full">
       <!-- <h2 class="text-2xl pb-3 font-semibold">
         Send Message
     </h2> -->
@@ -79,6 +79,7 @@
             data-aos-anchor-placement="top-bottom"
 
           type="submit"
+          name="submit"
           class="w-2/3 md:w-1/3 lg:w-1/3 flex justify-center button_slide slide_right py-2 px-2 lg:px-5 text-xl lg:text-2xl h-12 lg:h-14"
         >
           Send

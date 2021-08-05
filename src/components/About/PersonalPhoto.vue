@@ -13,7 +13,7 @@
           v-bind:class="{ fadeAndSlide: isFadeAndSlide }"
           class="flex mt-24"
           src="@/assets/images/Mat-nobg.png"
-          alt=""
+          alt="Personal Photo"
           style="width: auto"
         />
       </picture>

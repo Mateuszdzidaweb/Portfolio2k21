@@ -3,16 +3,23 @@
     <p
       v-show="textVisible"
       v-bind:class="{ fadeSlideUp: isFade }"
-      class="text-white h-auto text-xl flex py-4 px-2 xl:py-8 lg:text-left text-left m-auto"
+      class="text-white h-auto text-2xl flex py-4 px-2 xl:py-8 lg:text-left text-left m-auto text-font"
     >
       {{ textDescription }}
+    </p>
+        <p
+      v-show="textVisible"
+      v-bind:class="{ fadeSlideUp: isFade }"
+      class="text-white h-auto text-2xl flex py-2 px-2 xl:py-2 lg:text-left text-left m-auto text-font"
+    >
+      {{ textDescriptionParagraph2 }}
     </p>
   </div>
 </template>
 
 <script>
 export default {
-  props: ["textDescription"],
+  props: ["textDescription", 'textDescriptionParagraph2'],
   data() {
     return {
       isVisible: false,
@@ -23,7 +30,7 @@ export default {
   methods: {
     ObjectVisible(isVisible) {
       this.isVisible = false;
-      console.log(isVisible);
+  
 
       if (isVisible === true) {
         this.textVisible = true;
@@ -41,6 +48,10 @@ export default {
   transition: ease-out 0.4s;
   animation-duration: 3s;
   animation-name: fadeSlideUp;
+}
+
+.text-font{
+    font-family: 'Georama', sans-serif;
 }
 
 .word-brake{

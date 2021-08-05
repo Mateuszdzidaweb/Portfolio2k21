@@ -1,26 +1,5 @@
 <template>
   <div>
-    <FitnessProjectModal
-      v-show="isFitnessProjectModalVisible"
-      @closeFitnessProjectModal="closeFitnessProjectModal"
-      :projectTitle="'Fitness mobile App'"
-    >
-    </FitnessProjectModal>
-
-    <NewsApiProjectModal
-      v-show="isNewsApiProjectModalVisible"
-      @closeNewsApiProjectModal="closeNewsApiProjectModal"
-      :projectTitle="'News Api'"
-    >
-    </NewsApiProjectModal>
-
-    <CaffeeProjectModal
-      v-show="isCaffeeProjectModalVisible"
-      @closeCaffeeProjectModal="closeCaffeeProjectModal"
-      :projectTitle="'Caffee Store mobile App'"
-    >
-    </CaffeeProjectModal>
-
     <div class="w-full h-auto lg:py-10 bg-color">
       <section
         id="section-work"
@@ -35,6 +14,7 @@
           <TextFade
             class="2xl:py-5"
             :textDescription="'This is a small gallery of projects that I have done during university and my free time. Most of my projects were created to enhance my Web Development skills. Interested to see some of my work? Visit my work page.'"
+            :textDescriptionParagraph2="``"
           ></TextFade>
         </div>
 
@@ -50,23 +30,24 @@
         </div>
       </section>
 
-      <div class="w-full h-auto flex justify-center z-10">
+      <div class="w-full h-auto flex justify-center">
         <section
-          class="px-2 mx-auto max-w-10xl sm:px-0 lg:px-8 lg:py-4 xl:py-10 md:w-full wrap-photos"
+          class="px-2 mx-auto max-w-10xl sm:px-0 lg:px-8 lg:py-4 xl:py-10 md:w-full wrap-photos overflow-hidden"
         >
           <ul
             role="list"
-            class="grid grid-cols-2 mx-auto sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 w-full lg:w-full 2xl:grid-cols-3 2xl:w-4/6 max-projects-width"
+            class="grid grid-cols-2 mx-auto sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-3 w-full lg:w-full 2xl:grid-cols-3 2xl:w-4/6 max-projects-width overflow-hidden"
           >
-            <div @click="OpenFitnessProjectModal">
+    
+            <li @click="isFitnessProjectModalVisible = true">
               <Project
                 data-aos="zoom-in"
                 data-aos-duration="1500"
                 data-aos-anchor-placement="bottom-bottom"
                 :imageName="'fitnessApp8.png'"
               ></Project>
-            </div>
-            <div @click="OpenNewsApiProjectModal">
+            </li>
+            <li @click="isNewsApiProjectModalVisible = true">
               <Project
                 data-aos="zoom-in"
                 data-aos-delay="300"
@@ -75,8 +56,8 @@
                 :imageName="'NewsApiImg.png'"
               >
               </Project>
-            </div>
-            <div @click="OpenCaffeeProjectModal">
+            </li>
+            <li @click="isCaffeeProjectModalVisible = true">
               <Project
                 data-aos="zoom-in"
                 data-aos-delay="300"
@@ -85,7 +66,8 @@
                 :imageName="'CoffeeApp.png'"
               >
               </Project>
-            </div>
+            </li>
+
             <!-- grid grid-cols-2 mx-auto sm:grid-cols-2 md:flex md:flex-wrap  border-2 -->
             <!-- class="grid grid-cols-1 mx-auto sm:grid-cols-2 md:grid-cols-4 lg:grid-cols-4" -->
             <!-- <Projects></Projects>
@@ -96,6 +78,49 @@ md:flex md:flex-wrap md:justify-center
           </ul>
         </section>
       </div>
+
+      <transition
+        class="z-99"
+        mode="out-in"
+        enter-active-class="animate__animated animate__fadeIn"
+        leave-active-class="animate__animated animate__fadeOut"
+      >
+        <FitnessProjectModal
+          class="z-99"
+          v-show="isFitnessProjectModalVisible"
+          @closeFitnessProjectModal="isFitnessProjectModalVisible = false"
+          :projectTitle="'Fitness mobile App'"
+        >
+        </FitnessProjectModal>
+      </transition>
+
+      <transition
+        class="z-99"
+        mode="out-in"
+        enter-active-class="animate__animated animate__fadeIn"
+        leave-active-class="animate__animated animate__fadeOut"
+      >
+        <NewsApiProjectModal
+          v-show="isNewsApiProjectModalVisible"
+          @closeNewsApiProjectModal="isNewsApiProjectModalVisible = false"
+          :projectTitle="'News Api'"
+        >
+        </NewsApiProjectModal>
+      </transition>
+
+      <transition
+        class="z-99"
+        mode="out-in"
+        enter-active-class="animate__animated animate__fadeIn"
+        leave-active-class="animate__animated animate__fadeOut"
+      >
+        <CaffeeProjectModal
+          v-show="isCaffeeProjectModalVisible"
+          @closeCaffeeProjectModal="isCaffeeProjectModalVisible = false"
+          :projectTitle="'Caffee Store mobile App'"
+        >
+        </CaffeeProjectModal>
+      </transition>
     </div>
   </div>
 </template>
@@ -127,31 +152,22 @@ export default {
     NewsApiProjectModal,
     CaffeeProjectModal,
   },
-  methods: {
-    OpenFitnessProjectModal() {
-      console.log("openModal");
-      this.isFitnessProjectModalVisible = true;
-    },
-    closeFitnessProjectModal() {
-      this.isFitnessProjectModalVisible = false;
-    },
-    OpenNewsApiProjectModal() {
-      this.isNewsApiProjectModalVisible = true;
-    },
-    closeNewsApiProjectModal() {
-      this.isNewsApiProjectModalVisible = false;
-    },
-    OpenCaffeeProjectModal() {
-      this.isCaffeeProjectModalVisible = true;
-    },
-    closeCaffeeProjectModal() {
-      this.isCaffeeProjectModalVisible = false;
-    },
-  },
+  methods: {},
 };
 </script>
 
 <style lang="less">
+.fade-enter-active,
+.fade-leave-active {
+  transition: opacity 0.2s;
+  opacity: 0.8;
+}
+
+.fade-enter,
+.fade-leave-active {
+  opacity: 0;
+}
+
 .work-big {
   left: 60vh;
   margin-top: 6rem;
@@ -171,7 +187,7 @@ export default {
 }
 
 .max-projects-width {
-  max-width: 1150px;
+  max-width: 1200px;
 }
 
 @media (min-width: 768px) and (max-width: 1024px) {

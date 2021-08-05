@@ -54,7 +54,6 @@ export default {
   methods: {
     closeCaffeeProjectModal() {
       this.$emit("closeCaffeeProjectModal");
-      console.log("emmit close");
     },
   },
 };

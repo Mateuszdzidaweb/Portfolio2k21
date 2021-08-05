@@ -102,10 +102,8 @@ export default {
     };
   },
   methods: {
-    ObjectVisible(isVisible, entry) {
+    ObjectVisible(isVisible) {
       this.isVisible = true;
-      console.log(entry);
-      console.log(isVisible);
       if (isVisible === true) {
         setTimeout(() => {
           this.letterVisible1 = true;
@@ -150,6 +148,11 @@ export default {
   font-family: "Ramabhadra", sans-serif;
   letter-spacing: -1px;
   font-size: 4.5vw;
+
+    &:hover{
+        color: #00fdd7;
+        animation-name: rubberBand;
+    }
 }
 
 .fadeSlideDown {
@@ -158,6 +161,8 @@ export default {
   animation-iteration-count: 1;
   animation-name: fadeSlideDown;
 }
+
+
 
 @keyframes fadeSlideDown {
   from {
