@@ -83,7 +83,7 @@
           </h1>
 
           <h1
-            class="text-white text-left title-font text swing"
+            class="text-white text-left title-font logo-txt swing"
             v-show="letterVisible11"
             v-bind:class="{ bounce: isBounced }"
           >
@@ -396,7 +396,7 @@ export default {
   animation-name: rubberBand;
 }
 
-.text {
+.logo-txt {
   // transform: translate(50%,-50%);
   // text-transform: uppercase;
   font-family: verdana;

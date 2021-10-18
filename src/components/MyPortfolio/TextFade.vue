@@ -3,14 +3,14 @@
     <p
       v-show="textVisible"
       v-bind:class="{ fadeSlideUp: isFade }"
-      class="text-white h-auto text-2xl flex py-4 px-2 xl:py-8 lg:text-left text-left m-auto text-font"
+      class="text-white h-auto text-xl lg:text-2xl flex py-4 px-2 xl:py-8 lg:text-start text-left m-auto text-font"
     >
       {{ textDescription }}
     </p>
         <p
       v-show="textVisible"
       v-bind:class="{ fadeSlideUp: isFade }"
-      class="text-white h-auto text-2xl flex py-2 px-2 xl:py-2 lg:text-left text-left m-auto text-font"
+      class="text-white h-auto  text-xl lg:text-2xl flex py-2 px-2 xl:py-2 lg:text-left text-left m-auto text-font"
     >
       {{ textDescriptionParagraph2 }}
     </p>

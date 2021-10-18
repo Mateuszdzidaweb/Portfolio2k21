@@ -13,7 +13,7 @@
         <!-- list -->
            <div class="flex flex-col md:flex-row  lg:flex-col gap-3">
           <a
-            href=""
+           
             class="flex items-center text-white text-2xl p-2"
             data-aos="fade-left"
             data-aos-delay="550"
@@ -55,7 +55,7 @@
             Linkedin
           </a>
           <a
-            href=""
+            
             class="flex items-center text-white text-2xl p-2"
             data-aos="fade-left"
             data-aos-delay="750"

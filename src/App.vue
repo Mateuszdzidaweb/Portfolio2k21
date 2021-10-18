@@ -1,51 +1,39 @@
 <template>
   <div id="app">
-      <!-- <LoadingScreen v-show="isLoading" ></LoadingScreen> -->
+      <Nabrar></Nabrar>
+    <!-- <LoadingScreen v-show="isLoading" ></LoadingScreen> -->
     <!-- <div id="nav">
       <router-link to="/">Home</router-link> |
     </div> -->
-    <!-- <MyPortfolioComponent v-show="!false" @openProjectModal='openModal' ></MyPortfolioComponent> -->
-    <!-- <ProjectModal v-show="isProjectModalVisible" >
-    </ProjectModal> -->
-    <!-- @close="closeProjectModal" -->
-    <router-view/>
 
-
+    <router-view />
   </div>
 </template>
 
-
 <script>
-// import ProjectModal from "@/components/MyPortfolio/ProjectModal";
-// import MyPortfolioComponent from '@/components/MyPortfolioComponent'
-// import LoadingScreen from '@/components/LoadingScreen.vue'
+import Nabrar from "@/components/Navbar.vue";
 export default {
-    data(){
-        return{
-            isLoading: true,
-            isProjectModalVisible: false,
-        }
-    },
-    components: {
-        // LoadingScreen,
-        // ProjectModal,
-        // MyPortfolioComponent,
-    },
-    mounted() {
-    setTimeout(() => {
-      this.isLoading = false
-    }, 2000)
+  data() {
+    return {
+      isLoading: true,
+      isProjectModalVisible: false,
+    };
   },
-//   methods:{
-//       openModal(){
-//           console.log('openModal');
-//           this.isProjectModalVisible = true;
-//       }
-//   }
-}
+  components: {
+    Nabrar,
+  },
+  mounted() {
+    setTimeout(() => {
+      this.isLoading = false;
+    }, 2000);
+  },
+};
 </script>
 
 <style lang="less">
+// body{
+//     overflow: hidden;
+// }
 
 @main-color: #1e1e1e;
 
@@ -71,5 +59,4 @@ export default {
 }
 </style>
 
-
-<style src="./assets/styles/css/style.css"/>
+<style src="./assets/styles/css/style.css" />

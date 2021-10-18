@@ -3,7 +3,7 @@
     <div v-observe-visibility="ObjectVisible" class="flex flex-row w-auto justify-center lg:justify-start  h-20 md:h-24 lg:h-32">
       <h1 class="portfolio-heading text-7xl flex py-4" v-show="letterVisible1"  v-bind:class="{ fadeSlideDown: isFade }">A</h1>
       <h1 class="portfolio-heading text-7xl flex py-4" v-show="letterVisible2"  v-bind:class="{ fadeSlideDown: isFade }">b</h1>
-      <h1 class="portfolio-heading text-7xl flex py-4" v-show="letterVisible3"  v-bind:class="{ fadeSlideDown: isFade }">a</h1>
+      <h1 class="portfolio-heading text-7xl flex py-4" v-show="letterVisible3"  v-bind:class="{ fadeSlideDown: isFade }">o</h1>
       <h1 class="portfolio-heading text-7xl flex py-4" v-show="letterVisible4"  v-bind:class="{ fadeSlideDown: isFade }">u</h1>
       <h1 class="portfolio-heading text-7xl flex py-4 mr-4 lg:mr-6" v-show="letterVisible5"  v-bind:class="{ fadeSlideDown: isFade }">t</h1>
 
