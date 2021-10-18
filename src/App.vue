@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-      <Nabrar></Nabrar>
+      <!-- <Nabrar></Nabrar> -->
     <!-- <LoadingScreen v-show="isLoading" ></LoadingScreen> -->
     <!-- <div id="nav">
       <router-link to="/">Home</router-link> |
@@ -11,7 +11,7 @@
 </template>
 
 <script>
-import Nabrar from "@/components/Navbar.vue";
+// import Nabrar from "@/components/Navbar.vue";
 export default {
   data() {
     return {
@@ -20,7 +20,7 @@ export default {
     };
   },
   components: {
-    Nabrar,
+    // Nabrar,
   },
   mounted() {
     setTimeout(() => {
